@@ -1,0 +1,126 @@
+.landing {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.landing video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.landing .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 34, 57, 0.85);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.landing .info {
+  text-align: center;
+}
+.landing .info p {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.landing .info h2 {
+  font-size: 4em;
+  color: white;
+  font-weight: 900;
+}
+.landing .info h2 span {
+  color: #f5a425;
+}
+.landing .info .btn {
+  color: white;
+  background-color: #f5a425;
+  padding: 10px 16px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.cards {
+  width: 100%;
+  height: 0;
+  background-image: url(../img/choosing-bg.jpg);
+}
+@media (max-width: 1020px) {
+  .cards {
+    height: auto;
+  }
+}
+.cards .container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 1020px) {
+  .cards .container {
+    position: relative;
+    gap: 0px;
+    flex-direction: column;
+  }
+}
+.cards .column-landing {
+  width: 30%;
+  border: 1px solid white;
+  overflow: hidden;
+  height: 80px;
+  background-color: rgb(22, 34, 57);
+}
+.cards .column-landing:hover {
+  height: 200px;
+  background-color: #f5a425;
+}
+@media (max-width: 1020px) {
+  .cards .column-landing {
+    width: 90%;
+    padding: 10px 20px;
+  }
+}
+.cards .column-landing .icon {
+  gap: 20px;
+  font-size: 30px;
+  color: white;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px;
+}
+.cards .column-landing .icon h3 {
+  font-size: 24px;
+}
+.cards .text {
+  margin: 0px 20px;
+}
+.cards .text p {
+  font-size: 18px;
+  color: white;
+}
+.cards .text a {
+  text-decoration: underline;
+  color: white;
+}
+
+.sss {
+  height: 100vh;
+}/*# sourceMappingURL=home.css.map */
