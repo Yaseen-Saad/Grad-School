@@ -61,6 +61,7 @@
   }
 }
 .cards .container {
+  padding: 10px 0px;
   width: 80%;
   display: flex;
   align-items: center;
@@ -80,13 +81,44 @@
 }
 .cards .column-landing {
   width: 30%;
-  border: 1px solid white;
   overflow: hidden;
   height: 80px;
   background-color: rgb(22, 34, 57);
 }
+.cards .column-landing:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+}
+@media (max-width: 1020px) {
+  .cards .column-landing:nth-child(2) {
+    position: static;
+  }
+}
+.cards .column-landing:first-child {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 1020px) {
+  .cards .column-landing:first-child {
+    position: static;
+    transform: translateX(0%);
+  }
+}
+.cards .column-landing:last-child {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+@media (max-width: 1020px) {
+  .cards .column-landing:last-child {
+    position: static;
+  }
+}
 .cards .column-landing:hover {
-  height: 200px;
+  height: 280px;
   background-color: #f5a425;
 }
 @media (max-width: 1020px) {
@@ -99,12 +131,15 @@
   gap: 20px;
   font-size: 30px;
   color: white;
-  width: 100%;
-  height: 60px;
+  height: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 40px;
+}
+.cards .column-landing .icon:hover .column-landing {
+  height: 280px;
+  background-color: #f5a425;
 }
 .cards .column-landing .icon h3 {
   font-size: 24px;
@@ -113,10 +148,11 @@
   margin: 0px 20px;
 }
 .cards .text p {
-  font-size: 18px;
+  font-size: 22px;
   color: white;
 }
 .cards .text a {
+  font-size: 22px;
   text-decoration: underline;
   color: white;
 }
