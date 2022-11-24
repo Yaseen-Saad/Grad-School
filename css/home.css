@@ -53,7 +53,7 @@
 .cards {
   width: 100%;
   height: 0;
-  background-image: url(../img/choosing-bg.jpg);
+  background-color: #0c1228;
 }
 @media (max-width: 1020px) {
   .cards {
@@ -61,12 +61,11 @@
   }
 }
 .cards .container {
-  padding: 10px 0px;
-  width: 80%;
+  padding: 100px 0px;
+  width: 90%;
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 40px;
   position: absolute;
   bottom: 0%;
   left: 50%;
@@ -76,19 +75,26 @@
   .cards .container {
     position: relative;
     gap: 0px;
+    padding: 0px;
     flex-direction: column;
   }
 }
 .cards .column-landing {
-  width: 30%;
+  width: 24%;
   overflow: hidden;
   height: 80px;
-  background-color: rgb(22, 34, 57);
+  padding: 4px 10px 10px 10px;
+  background-color: #0c1228;
+}
+@media (max-width: 1020px) {
+  .cards .column-landing {
+    width: 43%;
+  }
 }
 .cards .column-landing:nth-child(2) {
   position: absolute;
   bottom: 0;
-  left: 0%;
+  left: 10%;
 }
 @media (max-width: 1020px) {
   .cards .column-landing:nth-child(2) {
@@ -110,7 +116,7 @@
 .cards .column-landing:last-child {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 10%;
 }
 @media (max-width: 1020px) {
   .cards .column-landing:last-child {
@@ -123,12 +129,11 @@
 }
 @media (max-width: 1020px) {
   .cards .column-landing {
-    width: 90%;
-    padding: 10px 20px;
+    width: 100%;
+    padding: 1px 20px;
   }
 }
 .cards .column-landing .icon {
-  gap: 20px;
   font-size: 30px;
   color: white;
   height: 40px;
@@ -143,6 +148,7 @@
 }
 .cards .column-landing .icon h3 {
   font-size: 24px;
+  margin-left: 20px;
 }
 .cards .text {
   margin: 0px 20px;
@@ -157,6 +163,232 @@
   color: white;
 }
 
+header {
+  width: 100%;
+  padding: 3px 15px;
+  z-index: 100;
+  position: fixed;
+  background-color: rgba(12, 18, 40, 0.8862745098);
+}
+header .menu {
+  display: none;
+  width: 40px;
+  height: 30px;
+  position: relative;
+  right: 0%;
+}
+@media (max-width: 1073px) {
+  header .menu {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+  header .menu span {
+    width: 100%;
+    background-color: white;
+    height: 4px;
+    border-radius: 20px;
+  }
+  header .menu span:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  header .menu span:last-child {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  header .menu.active span {
+    width: 0%;
+  }
+  header .menu.active span:first-child {
+    width: 100%;
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  header .menu.active span:last-child {
+    width: 100%;
+    transform: rotate(-45deg) translate(10px, -7px);
+  }
+}
+header .container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px auto;
+}
+header .logo h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+}
+header .logo h3 span {
+  color: #f5a425;
+}
+header .links {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1073px) {
+  header .links {
+    display: none;
+    background-color: red;
+  }
+}
+header .links li:nth-child(2) {
+  position: relative;
+}
+header .links li:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  background-color: white;
+  right: 0;
+}
+header .links li a {
+  color: white;
+  padding: 10px 20px;
+  margin: 0px 10px;
+  border: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 800;
+}
+header .links li a.active {
+  border: 2px solid #f5a425;
+}
+header .links li a:hover {
+  border: 2px solid #f5a425;
+  transition: 0.3s all ease-in-out;
+}
+
 .sss {
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  background-image: url(../img/choosing-bg.jpg);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sss h2 {
+  margin: 0px;
+}
+.sss .container {
+  width: 80%;
+  margin: 0px auto;
+}
+.sss .container .change {
+  width: 91%;
+  margin: 0px auto;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  color: white;
+}
+.sss .container .change li {
+  height: 100%;
+  position: relative;
+  width: 30%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.sss .container .change li::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  text-align: center;
+  height: 10px;
+  background-color: white;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sss .container .container {
+  width: 90%;
+}
+.sss .container .info {
+  margin-top: 100px;
+  width: 100%;
+}
+.sss .container .info .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+@media (max-width: 1020px) {
+  .sss .container .info .card {
+    flex-direction: column-reverse;
+  }
+}
+.sss .container .info .card .img {
+  width: 50%;
+}
+.sss .container .info .card .img img {
+  width: 100%;
+}
+@media (max-width: 1020px) {
+  .sss .container .info .card .img {
+    width: 75%;
+  }
+}
+.sss .container .info .card .text {
+  width: 50%;
+}
+@media (max-width: 1020px) {
+  .sss .container .info .card .text {
+    width: 100%;
+    text-align: center;
+  }
+}
+.sss .container .info .card .text h3 {
+  color: white;
+  font-size: 40px;
+}
+@media (max-width: 1020px) {
+  .sss .container .info .card .text h3 {
+    font-size: 25px;
+  }
+}
+.sss .container .info .card .text p {
+  font-size: 24px;
+  line-height: 42.5px;
+  color: rgb(239, 237, 237);
+}
+@media (max-width: 1020px) {
+  .sss .container .info .card .text p {
+    font-size: 18px;
+  }
+}
+
+.title {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title h2 {
+  margin-top: 120px;
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  display: inline-block;
+  padding: 15px 20px;
+  border: 2px solid rgba(250, 250, 250, 0.1);
+}
+.title h2::before {
+  content: "";
+  width: 2px;
+  height: 120px;
+  position: absolute;
+  top: -234%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(250, 250, 250, 0.1);
 }/*# sourceMappingURL=home.css.map */
